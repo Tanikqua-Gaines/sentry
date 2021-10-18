@@ -27,8 +27,8 @@ module.exports = {
     }
 
     github.checks.create({
-      owner: 'getsentry',
-      repo: 'sentry',
+      owner: context.repo.owner,
+      repo: context.repo.repo,
       name,
       head_sha: context.sha,
       status: 'completed',
