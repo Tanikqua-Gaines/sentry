@@ -25,7 +25,7 @@ jobs:
           filters: .github/file-filters.yml
 
       - name: Dispatch getsentry tests
-        uses: actions/github-script@v3
+        uses: actions/github-script@v5
         with:
           github-token: ${{ steps.token.outputs.token }}
           script: |

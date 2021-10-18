@@ -26,7 +26,7 @@ module.exports = {
       return;
     }
 
-    github.checks.create({
+    github.rest.checks.create({
       owner: context.repo.owner,
       repo: context.repo.repo,
       name,
