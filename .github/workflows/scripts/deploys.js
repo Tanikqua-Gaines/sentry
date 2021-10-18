@@ -16,14 +16,11 @@ module.exports = {
     const frontendOnly = frontend && !backend;
     const backendOnly = backend && !frontend;
 
-    console.log(JSON.stringify(github, null, 2));
-    console.log(JSON.stringify(context, null, 2));
-
     const name = frontendOnly
       ? 'only frontend changes'
       : backendOnly
       ? 'only backend changes'
-      : '';
+      : 'fullstack changes';
 
     if (!name) {
       return;
