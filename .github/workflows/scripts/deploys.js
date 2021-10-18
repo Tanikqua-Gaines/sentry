@@ -35,8 +35,6 @@ module.exports = {
       conclusion: 'success',
     });
 
-    console.log(JSON.stringify(result, null, 2));
-
     return result;
   },
 };

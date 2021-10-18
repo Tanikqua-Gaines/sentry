@@ -6,8 +6,6 @@ on:
   push:
     branches:
       - master
-  # TODO: don't run on PRs, only on master
-  pull_request:
 
 jobs:
   files-changed:
