@@ -27,7 +27,6 @@ jobs:
       - name: Dispatch getsentry tests
         uses: actions/github-script@v5
         with:
-          github-token: ${{ steps.token.outputs.token }}
           script: |
             require(`${process.env.GITHUB_WORKSPACE}/.github/workflows/scripts/deploys`).updateChangeType({
               github,
