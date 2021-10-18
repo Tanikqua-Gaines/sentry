@@ -26,7 +26,7 @@ module.exports = {
       return;
     }
 
-    github.rest.checks.create({
+    const result = await github.rest.checks.create({
       owner: context.repo.owner,
       repo: context.repo.repo,
       name,
@@ -34,5 +34,9 @@ module.exports = {
       status: 'completed',
       conclusion: 'success',
     });
+
+    console.log(JSON.stringify(result, null, 2));
+
+    return result;
   },
 };
