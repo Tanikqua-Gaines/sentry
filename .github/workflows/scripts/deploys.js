@@ -33,7 +33,9 @@ module.exports = {
       owner: 'getsentry',
       repo: 'sentry',
       name,
-      status: 'success',
+      head_sha: context.sha,
+      status: 'completed',
+      conclusion: 'success',
     });
   },
 };
